@@ -10,7 +10,7 @@ go build
 simple cluster operation tool
 
 Usage:
-  cluster [command]
+  tinyup [command]
 
 Available Commands:
   completion  Generate the autocompletion script for the specified shell

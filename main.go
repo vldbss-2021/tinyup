@@ -23,7 +23,7 @@ const (
 
 var (
 	rootCmd = &cobra.Command{
-		Use:   "cluster subcommand",
+		Use:   "tinyup subcommand",
 		Short: "simple cluster operation tool",
 	}
 
