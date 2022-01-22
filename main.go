@@ -291,11 +291,11 @@ func Check(port int) (status bool, err error) {
 	// Try to create a server with the port
 	server1, err1 := net.Listen("tcp", host1)
 	if err1 == nil {
-		defer server1.Close()
+		server1.Close()
 	}
 	server2, err2 := net.Listen("tcp", host2)
 	if err2 == nil {
-		defer server2.Close()
+		server2.Close()
 	}
 
 	if err1 != nil || err2 != nil {
