@@ -151,7 +151,7 @@ var (
 			t = time.Now()
 			tstr = t.Format("20060102150405")
 			logName = fmt.Sprintf("log_%s", tstr)
-			startDBCmd := fmt.Sprintf("nohup ./%s > %s 2>&1 &", tinysql, logName)
+			startDBCmd := fmt.Sprintf(`nohup ./%s -store tikv -path 127.0.0.1:%d > %s 2>&1 &`, tinysql, schedulerPort, logName)
 			log.Info("start scheduler cmd", zap.String("cmd", startDBCmd))
 			shellCmd = exec.Command("bash", "-c", startDBCmd)
 			shellCmd.Dir = dbPath
